@@ -1,10 +1,6 @@
-library(dplyr)
-library(ggsegExtra)
+library(ggseg.extra)
 library(ggseg.formats)
 
-future::plan(future::multisession(workers = 4))
-progressr::handlers("cli")
-progressr::handlers(global = TRUE)
 
 volume_file <- here::here("data-raw", "shen_2mm_268_parcellation.nii.gz")
 
@@ -24,7 +20,7 @@ writeLines(
 cli::cli_h1("Creating Shen 268-parcel atlas")
 cli::cli_alert_info("Found {length(label_ids)} non-zero labels in volume")
 
-atlases <- create_wholebrain_atlas(
+atlases <- create_wholebrain_from_volume(
   input_volume = volume_file,
   input_lut = lut_file,
   atlas_name = "shen268",
