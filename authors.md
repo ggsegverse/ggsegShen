@@ -11,13 +11,13 @@ Source:
 [`DESCRIPTION`](https://github.com/ggsegverse/ggsegShen/blob/main/DESCRIPTION)
 
 Mowinckel A (2026). *ggsegShen: Shen 268 Functional Parcellation for the
-'ggseg' Ecosystem*. R package version 1.0.0,
+'ggseg' Ecosystem*. R package version 1.0.1,
 <https://github.com/ggsegverse/ggsegShen>.
 
     @Manual{,
       title = {ggsegShen: Shen 268 Functional Parcellation for the 'ggseg' Ecosystem},
       author = {Athanasia Mo Mowinckel},
       year = {2026},
-      note = {R package version 1.0.0},
+      note = {R package version 1.0.1},
       url = {https://github.com/ggsegverse/ggsegShen},
     }
