@@ -34,18 +34,13 @@ atlases <- create_wholebrain_from_volume(
   verbose = TRUE
 )
 
-shen268_cortical <- atlases$cortical
-shen268_subcortical <- atlases$subcortical
+.shen268_cortical <- atlases$cortical
+.shen268_subcortical <- atlases$subcortical
 
-cli::cli_alert_success("Cortical: {nrow(shen268_cortical$core)} regions")
-cli::cli_alert_success("Subcortical: {nrow(shen268_subcortical$core)} regions")
+print(.shen268_cortical)
+plot(.shen268_cortical)
+print(.shen268_subcortical)
+plot(.shen268_subcortical)
 
-brain_pals <- stats::setNames(
-  list(shen268_cortical$palette, shen268_subcortical$palette),
-  c(shen268_cortical$atlas, shen268_subcortical$atlas)
-)
-save(brain_pals, file = here::here("R/sysdata.rda"), compress = "xz")
-
-usethis::use_data(shen268_cortical, shen268_subcortical,
-  overwrite = TRUE, compress = "xz")
-cli::cli_alert_success("Saved to data/")
+usethis::use_data(.shen268_cortical, .shen268_subcortical,
+  overwrite = TRUE, compress = "xz", internal = TRUE)
