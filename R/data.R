@@ -5,6 +5,7 @@
 #' [ggseg::geom_brain()] and 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Shen X et al. (2013). Groupwise whole-brain parcellation
 #'   from resting-state fMRI data for network node identification.
@@ -22,6 +23,7 @@ shen268_cortical <- function() .shen268_cortical
 #' (Shen et al., 2013). Contains 2D polygon geometry and 3D meshes.
 #'
 #' @family ggseg_atlases
+#' @family subcortical_atlases
 #'
 #' @references Shen X et al. (2013). Groupwise whole-brain parcellation
 #'   from resting-state fMRI data for network node identification.
