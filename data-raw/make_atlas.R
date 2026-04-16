@@ -46,9 +46,14 @@ plot(.shen268_subcortical)
 if (!is.null(.shen268_cerebellar)) {
   print(.shen268_cerebellar)
   plot(.shen268_cerebellar)
-  usethis::use_data(.shen268_cortical, .shen268_subcortical,
-    .shen268_cerebellar, overwrite = TRUE, compress = "xz", internal = TRUE)
+  usethis::use_data(
+    .shen268_cortical, .shen268_subcortical,
+    .shen268_cerebellar,
+    overwrite = TRUE, compress = "xz", internal = TRUE
+  )
 } else {
-  usethis::use_data(.shen268_cortical, .shen268_subcortical,
-    overwrite = TRUE, compress = "xz", internal = TRUE)
+  usethis::use_data(
+    .shen268_cortical, .shen268_subcortical,
+    overwrite = TRUE, compress = "xz", internal = TRUE
+  )
 }

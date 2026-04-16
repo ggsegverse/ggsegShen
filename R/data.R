@@ -16,7 +16,7 @@
 #' @export
 #' @examples
 #' shen268_cortical()
-shen268_cortical <- function() .shen268_cortical
+shen268_cortical <- function() .shen268_cortical # nolint: object_usage_linter.
 #' Shen 268 Subcortical Parcellation
 #'
 #' Subcortical regions from the Shen 268-node functional parcellation
@@ -33,7 +33,7 @@ shen268_cortical <- function() .shen268_cortical
 #' @export
 #' @examples
 #' shen268_subcortical()
-shen268_subcortical <- function() .shen268_subcortical
+shen268_subcortical <- function() .shen268_subcortical # nolint: object_usage_linter.
 #' Shen 268 Cerebellar Parcellation
 #'
 #' Cerebellar regions from the Shen 268-node functional parcellation
@@ -50,4 +50,4 @@ shen268_subcortical <- function() .shen268_subcortical
 #' @export
 #' @examples
 #' shen268_cerebellar()
-shen268_cerebellar <- function() .shen268_cerebellar
+shen268_cerebellar <- function() .shen268_cerebellar # nolint: object_usage_linter.
