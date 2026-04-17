@@ -12,3 +12,13 @@ data-raw/**/*.mgz
 *.nii.gz
 *.mgz
 *.mat
+
+# Pipeline artefacts
+data-raw/**/masks/
+data-raw/**/*.rds
+data-raw/**/*.rda
+data-raw/**/*.png
+data-raw/**/*.jpg
+data-raw/**/*.svg
+data-raw/**/surface_overlays/
+data-raw/**/tess
