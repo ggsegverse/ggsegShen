@@ -4,10 +4,17 @@
 
 # ggsegShen
 
-> **Work in Progress** – This package is under active development and
-> has not yet been officially released.
+<!-- badges: start -->
 
-Shen 268-node functional parcellation for the ggseg ecosystem.
+[![R-CMD-check](https://github.com/ggsegverse/ggsegShen/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggsegverse/ggsegShen/actions/workflows/R-CMD-check.yaml)
+[![r-universe](https://ggseg.r-universe.dev/badges/ggsegShen.png)](https://ggseg.r-universe.dev/ggsegShen)
+<!-- badges: end -->
+
+Shen 268 functional parcellation atlas for the ggseg ecosystem.
+
+Shen X, Tokoglu F, Papademetris X, & Constable RT (2013). Groupwise
+whole-brain parcellation from resting-state fMRI data for network node
+identification. *NeuroImage*, 82, 403-415.
 
 ## Installation
 
@@ -27,7 +34,7 @@ You can install this package from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("pak")
-pak::pak("ggseg/ggsegShen")
+pak::pak("ggsegverse/ggsegShen")
 ```
 
 ## Cortical atlas
@@ -44,12 +51,11 @@ ggplot() +
     position = position_brain(hemi ~ view),
     show.legend = FALSE
   ) +
-  scale_fill_manual(values = shen268_cortical()$palette, na.value = "grey") +
-  theme_void() +
-  ggtitle("Shen 268 cortical parcellation")
+  theme_void()
 ```
 
-<img src="man/figures/README-cortical-1.png" style="width:100.0%" />
+<img src="man/figures/README-shen-cortical-1.png"
+style="width:100.0%" />
 
 ## Subcortical atlas
 
@@ -61,21 +67,14 @@ ggplot() +
     position = position_brain(. ~ view),
     show.legend = FALSE
   ) +
-  scale_fill_manual(values = shen268_subcortical()$palette, na.value = "grey") +
-  theme_void() +
-  ggtitle("Shen 268 subcortical parcellation")
+  theme_void()
 ```
 
-<img src="man/figures/README-subcortical-1.png" style="width:100.0%" />
+<img src="man/figures/README-shen-subcortical-1.png"
+style="width:100.0%" />
 
-## Reference
+## Data source
 
-Shen X et al. (2013). Groupwise whole-brain parcellation from
-resting-state fMRI data for network node identification. *NeuroImage*,
-82, 403-415.
-
-## Code of Conduct
-
-Please note that the ggsegShen project is released with a [Contributor
-Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
-you agree to abide by its terms.
+Shen X, Tokoglu F, Papademetris X, & Constable RT (2013). Groupwise
+whole-brain parcellation from resting-state fMRI data for network node
+identification. *NeuroImage*, 82, 403-415.
