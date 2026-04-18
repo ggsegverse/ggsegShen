@@ -1,9 +1,10 @@
 # ggsegShen
 
-> **Work in Progress** – This package is under active development and
-> has not yet been officially released.
+Shen 268 functional parcellation atlas for the ggseg ecosystem.
 
-Shen 268-node functional parcellation for the ggseg ecosystem.
+Shen X, Tokoglu F, Papademetris X, & Constable RT (2013). Groupwise
+whole-brain parcellation from resting-state fMRI data for network node
+identification. *NeuroImage*, 82, 403-415.
 
 ## Installation
 
@@ -23,7 +24,7 @@ You can install this package from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("pak")
-pak::pak("ggseg/ggsegShen")
+pak::pak("ggsegverse/ggsegShen")
 ```
 
 ## Cortical atlas
@@ -40,12 +41,10 @@ ggplot() +
     position = position_brain(hemi ~ view),
     show.legend = FALSE
   ) +
-  scale_fill_manual(values = shen268_cortical()$palette, na.value = "grey") +
-  theme_void() +
-  ggtitle("Shen 268 cortical parcellation")
+  theme_void()
 ```
 
-![](reference/figures/README-cortical-1.png)
+![](reference/figures/README-shen-cortical-1.png)
 
 ## Subcortical atlas
 
@@ -57,24 +56,16 @@ ggplot() +
     position = position_brain(. ~ view),
     show.legend = FALSE
   ) +
-  scale_fill_manual(values = shen268_subcortical()$palette, na.value = "grey") +
-  theme_void() +
-  ggtitle("Shen 268 subcortical parcellation")
+  theme_void()
 ```
 
-![](reference/figures/README-subcortical-1.png)
+![](reference/figures/README-shen-subcortical-1.png)
 
-## Reference
+## Data source
 
-Shen X et al. (2013). Groupwise whole-brain parcellation from
-resting-state fMRI data for network node identification. *NeuroImage*,
-82, 403-415.
-
-## Code of Conduct
-
-Please note that the ggsegShen project is released with a [Contributor
-Code of Conduct](https://ggseg.github.io/ggsegShen/CODE_OF_CONDUCT.md).
-By contributing to this project, you agree to abide by its terms.
+Shen X, Tokoglu F, Papademetris X, & Constable RT (2013). Groupwise
+whole-brain parcellation from resting-state fMRI data for network node
+identification. *NeuroImage*, 82, 403-415.
 
 # Package index
 
