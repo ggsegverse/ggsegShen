@@ -23,6 +23,8 @@ from resting-state fMRI data for network node identification.
 }
 \seealso{
 Other ggseg_atlases: 
+\code{\link{shen268_cerebellar}()},
 \code{\link{shen268_cortical}()}
 }
 \concept{ggseg_atlases}
+\concept{subcortical_atlases}

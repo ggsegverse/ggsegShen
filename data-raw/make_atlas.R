@@ -36,11 +36,24 @@ atlases <- create_wholebrain_from_volume(
 
 .shen268_cortical <- atlases$cortical
 .shen268_subcortical <- atlases$subcortical
+.shen268_cerebellar <- atlases$cerebellar
 
 print(.shen268_cortical)
 plot(.shen268_cortical)
 print(.shen268_subcortical)
 plot(.shen268_subcortical)
 
-usethis::use_data(.shen268_cortical, .shen268_subcortical,
-  overwrite = TRUE, compress = "xz", internal = TRUE)
+if (!is.null(.shen268_cerebellar)) {
+  print(.shen268_cerebellar)
+  plot(.shen268_cerebellar)
+  usethis::use_data(
+    .shen268_cortical, .shen268_subcortical,
+    .shen268_cerebellar,
+    overwrite = TRUE, compress = "xz", internal = TRUE
+  )
+} else {
+  usethis::use_data(
+    .shen268_cortical, .shen268_subcortical,
+    overwrite = TRUE, compress = "xz", internal = TRUE
+  )
+}
