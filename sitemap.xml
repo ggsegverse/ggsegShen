@@ -1,12 +1,12 @@
 <urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
 <url><loc>https://ggseg.github.io/ggsegShen/404.html</loc></url>
-<url><loc>https://ggseg.github.io/ggsegShen/CODE_OF_CONDUCT.html</loc></url>
 <url><loc>https://ggseg.github.io/ggsegShen/authors.html</loc></url>
 <url><loc>https://ggseg.github.io/ggsegShen/copilot-instructions.html</loc></url>
 <url><loc>https://ggseg.github.io/ggsegShen/index.html</loc></url>
 <url><loc>https://ggseg.github.io/ggsegShen/news/index.html</loc></url>
 <url><loc>https://ggseg.github.io/ggsegShen/reference/ggsegShen-package.html</loc></url>
 <url><loc>https://ggseg.github.io/ggsegShen/reference/index.html</loc></url>
+<url><loc>https://ggseg.github.io/ggsegShen/reference/shen268_cerebellar.html</loc></url>
 <url><loc>https://ggseg.github.io/ggsegShen/reference/shen268_cortical.html</loc></url>
 <url><loc>https://ggseg.github.io/ggsegShen/reference/shen268_subcortical.html</loc></url>
 </urlset>

@@ -27,6 +27,7 @@ resting-state fMRI data for network node identification.
 ## See also
 
 Other ggseg_atlases:
+[`shen268_cerebellar()`](https://ggseg.github.io/ggsegShen/reference/shen268_cerebellar.md),
 [`shen268_subcortical()`](https://ggseg.github.io/ggsegShen/reference/shen268_subcortical.md)
 
 ## Examples
