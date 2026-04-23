@@ -59,30 +59,15 @@ pak::pak("ggsegverse/ggsegShen")
 #| label: shen-cortical
 library(ggseg)
 library(ggsegShen)
-library(ggplot2)
 
-ggplot() +
-  geom_brain(
-    atlas = shen268_cortical(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  theme_void()
+plot(shen268_cortical())
 ```
 
 ## Subcortical atlas
 
 ```{r}
 #| label: shen-subcortical
-ggplot() +
-  geom_brain(
-    atlas = shen268_subcortical(),
-    mapping = aes(fill = label),
-    position = position_brain(. ~ view),
-    show.legend = FALSE
-  ) +
-  theme_void()
+plot(shen268_subcortical())
 ```
 
 ## Data source
