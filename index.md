@@ -32,16 +32,8 @@ pak::pak("ggsegverse/ggsegShen")
 ``` r
 library(ggseg)
 library(ggsegShen)
-library(ggplot2)
 
-ggplot() +
-  geom_brain(
-    atlas = shen268_cortical(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  theme_void()
+plot(shen268_cortical())
 ```
 
 ![](reference/figures/README-shen-cortical-1.png)
@@ -49,14 +41,7 @@ ggplot() +
 ## Subcortical atlas
 
 ``` r
-ggplot() +
-  geom_brain(
-    atlas = shen268_subcortical(),
-    mapping = aes(fill = label),
-    position = position_brain(. ~ view),
-    show.legend = FALSE
-  ) +
-  theme_void()
+plot(shen268_subcortical())
 ```
 
 ![](reference/figures/README-shen-subcortical-1.png)
