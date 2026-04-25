@@ -13,7 +13,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.5.2 (2025-10-31)",
+  "runtimePlatform": "R version 4.6.0 (2026-04-24)",
   "author": [
     {
       "@type": "Person",
@@ -140,5 +140,8 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "NAKB"
+  "fileSize": "3360.246KB",
+  "releaseNotes": "https://github.com/ggsegverse/ggsegShen/blob/main/NEWS.md",
+  "readme": "https://github.com/ggsegverse/ggsegShen/blob/main/README.md",
+  "contIntegration": "https://github.com/ggsegverse/ggsegShen/actions/workflows/R-CMD-check.yaml"
 }
