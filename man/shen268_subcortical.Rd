@@ -13,6 +13,23 @@ A \link[ggseg.formats:ggseg_atlas]{ggseg.formats::ggseg_atlas} object (subcortic
 Subcortical regions from the Shen 268-node functional parcellation
 (Shen et al., 2013). Contains 2D polygon geometry and 3D meshes.
 }
+\section{Why the subcortical regions look unusual}{
+
+Shen 268 is a \emph{functional} parcellation derived from resting-state fMRI
+connectivity, not an anatomical one. Parcel boundaries follow connectivity
+gradients rather than named anatomical structures, so the subcortical
+parcels do not correspond one-to-one with structures like thalamus,
+caudate, or putamen, and the left/right counts are not symmetric.
+Of the 268 parcels, 15 fall in subcortical territory by a centroid
+criterion (\verb{|x| < 25 mm}, \verb{-20 < z < 20 mm}, \verb{-30 < y < 15 mm} in MNI).
+
+The greyscale anatomical context behind the regions comes from
+FreeSurfer's \code{cvs_avg35_inMNI152} aparc+aseg, used purely as a
+visual backdrop. The Shen volume is co-registered to that template
+(12-DOF affine) and resampled to 1 mm with per-label trilinear
+interpolation + argmax to keep boundaries smooth.
+}
+
 \examples{
 shen268_subcortical()
 }

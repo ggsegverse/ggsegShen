@@ -1,268 +1,269 @@
-1 Region_001 0 0 0 0
-2 Region_002 0 0 0 0
-3 Region_003 0 0 0 0
-4 Region_004 0 0 0 0
-5 Region_005 0 0 0 0
-6 Region_006 0 0 0 0
-7 Region_007 0 0 0 0
-8 Region_008 0 0 0 0
-9 Region_009 0 0 0 0
-10 Region_010 0 0 0 0
-11 Region_011 0 0 0 0
-12 Region_012 0 0 0 0
-13 Region_013 0 0 0 0
-14 Region_014 0 0 0 0
-15 Region_015 0 0 0 0
-16 Region_016 0 0 0 0
-17 Region_017 0 0 0 0
-18 Region_018 0 0 0 0
-19 Region_019 0 0 0 0
-20 Region_020 0 0 0 0
-21 Region_021 0 0 0 0
-22 Region_022 0 0 0 0
-23 Region_023 0 0 0 0
-24 Region_024 0 0 0 0
-25 Region_025 0 0 0 0
-26 Region_026 0 0 0 0
-27 Region_027 0 0 0 0
-28 Region_028 0 0 0 0
-29 Region_029 0 0 0 0
-30 Region_030 0 0 0 0
-31 Region_031 0 0 0 0
-32 Region_032 0 0 0 0
-33 Region_033 0 0 0 0
-34 Region_034 0 0 0 0
-35 Region_035 0 0 0 0
-36 Region_036 0 0 0 0
-37 Region_037 0 0 0 0
-38 Region_038 0 0 0 0
-39 Region_039 0 0 0 0
-40 Region_040 0 0 0 0
-41 Region_041 0 0 0 0
-42 Region_042 0 0 0 0
-43 Region_043 0 0 0 0
-44 Region_044 0 0 0 0
-45 Region_045 0 0 0 0
-46 Region_046 0 0 0 0
-47 Region_047 0 0 0 0
-48 Region_048 0 0 0 0
-49 Region_049 0 0 0 0
-50 Region_050 0 0 0 0
-51 Region_051 0 0 0 0
-52 Region_052 0 0 0 0
-53 Region_053 0 0 0 0
-54 Region_054 0 0 0 0
-55 Region_055 0 0 0 0
-56 Region_056 0 0 0 0
-57 Region_057 0 0 0 0
-58 Region_058 0 0 0 0
-59 Region_059 0 0 0 0
-60 Region_060 0 0 0 0
-61 Region_061 0 0 0 0
-62 Region_062 0 0 0 0
-63 Region_063 0 0 0 0
-64 Region_064 0 0 0 0
-65 Region_065 0 0 0 0
-66 Region_066 0 0 0 0
-67 Region_067 0 0 0 0
-68 Region_068 0 0 0 0
-69 Region_069 0 0 0 0
-70 Region_070 0 0 0 0
-71 Region_071 0 0 0 0
-72 Region_072 0 0 0 0
-73 Region_073 0 0 0 0
-74 Region_074 0 0 0 0
-75 Region_075 0 0 0 0
-76 Region_076 0 0 0 0
-77 Region_077 0 0 0 0
-78 Region_078 0 0 0 0
-79 Region_079 0 0 0 0
-80 Region_080 0 0 0 0
-81 Region_081 0 0 0 0
-82 Region_082 0 0 0 0
-83 Region_083 0 0 0 0
-84 Region_084 0 0 0 0
-85 Region_085 0 0 0 0
-86 Region_086 0 0 0 0
-87 Region_087 0 0 0 0
-88 Region_088 0 0 0 0
-89 Region_089 0 0 0 0
-90 Region_090 0 0 0 0
-91 Region_091 0 0 0 0
-92 Region_092 0 0 0 0
-93 Region_093 0 0 0 0
-94 Region_094 0 0 0 0
-95 Region_095 0 0 0 0
-96 Region_096 0 0 0 0
-97 Region_097 0 0 0 0
-98 Region_098 0 0 0 0
-99 Region_099 0 0 0 0
-100 Region_100 0 0 0 0
-101 Region_101 0 0 0 0
-102 Region_102 0 0 0 0
-103 Region_103 0 0 0 0
-104 Region_104 0 0 0 0
-105 Region_105 0 0 0 0
-106 Region_106 0 0 0 0
-107 Region_107 0 0 0 0
-108 Region_108 0 0 0 0
-109 Region_109 0 0 0 0
-110 Region_110 0 0 0 0
-111 Region_111 0 0 0 0
-112 Region_112 0 0 0 0
-113 Region_113 0 0 0 0
-114 Region_114 0 0 0 0
-115 Region_115 0 0 0 0
-116 Region_116 0 0 0 0
-117 Region_117 0 0 0 0
-118 Region_118 0 0 0 0
-119 Region_119 0 0 0 0
-120 Region_120 0 0 0 0
-121 Region_121 0 0 0 0
-122 Region_122 0 0 0 0
-123 Region_123 0 0 0 0
-124 Region_124 0 0 0 0
-125 Region_125 0 0 0 0
-126 Region_126 0 0 0 0
-127 Region_127 0 0 0 0
-128 Region_128 0 0 0 0
-129 Region_129 0 0 0 0
-130 Region_130 0 0 0 0
-131 Region_131 0 0 0 0
-132 Region_132 0 0 0 0
-133 Region_133 0 0 0 0
-134 Region_134 0 0 0 0
-135 Region_135 0 0 0 0
-136 Region_136 0 0 0 0
-137 Region_137 0 0 0 0
-138 Region_138 0 0 0 0
-139 Region_139 0 0 0 0
-140 Region_140 0 0 0 0
-141 Region_141 0 0 0 0
-142 Region_142 0 0 0 0
-143 Region_143 0 0 0 0
-144 Region_144 0 0 0 0
-145 Region_145 0 0 0 0
-146 Region_146 0 0 0 0
-147 Region_147 0 0 0 0
-148 Region_148 0 0 0 0
-149 Region_149 0 0 0 0
-150 Region_150 0 0 0 0
-151 Region_151 0 0 0 0
-152 Region_152 0 0 0 0
-153 Region_153 0 0 0 0
-154 Region_154 0 0 0 0
-155 Region_155 0 0 0 0
-156 Region_156 0 0 0 0
-157 Region_157 0 0 0 0
-158 Region_158 0 0 0 0
-159 Region_159 0 0 0 0
-160 Region_160 0 0 0 0
-161 Region_161 0 0 0 0
-162 Region_162 0 0 0 0
-163 Region_163 0 0 0 0
-164 Region_164 0 0 0 0
-165 Region_165 0 0 0 0
-166 Region_166 0 0 0 0
-167 Region_167 0 0 0 0
-168 Region_168 0 0 0 0
-169 Region_169 0 0 0 0
-170 Region_170 0 0 0 0
-171 Region_171 0 0 0 0
-172 Region_172 0 0 0 0
-173 Region_173 0 0 0 0
-174 Region_174 0 0 0 0
-175 Region_175 0 0 0 0
-176 Region_176 0 0 0 0
-177 Region_177 0 0 0 0
-178 Region_178 0 0 0 0
-179 Region_179 0 0 0 0
-180 Region_180 0 0 0 0
-181 Region_181 0 0 0 0
-182 Region_182 0 0 0 0
-183 Region_183 0 0 0 0
-184 Region_184 0 0 0 0
-185 Region_185 0 0 0 0
-186 Region_186 0 0 0 0
-187 Region_187 0 0 0 0
-188 Region_188 0 0 0 0
-189 Region_189 0 0 0 0
-190 Region_190 0 0 0 0
-191 Region_191 0 0 0 0
-192 Region_192 0 0 0 0
-193 Region_193 0 0 0 0
-194 Region_194 0 0 0 0
-195 Region_195 0 0 0 0
-196 Region_196 0 0 0 0
-197 Region_197 0 0 0 0
-198 Region_198 0 0 0 0
-199 Region_199 0 0 0 0
-200 Region_200 0 0 0 0
-201 Region_201 0 0 0 0
-202 Region_202 0 0 0 0
-203 Region_203 0 0 0 0
-204 Region_204 0 0 0 0
-205 Region_205 0 0 0 0
-206 Region_206 0 0 0 0
-207 Region_207 0 0 0 0
-208 Region_208 0 0 0 0
-209 Region_209 0 0 0 0
-210 Region_210 0 0 0 0
-211 Region_211 0 0 0 0
-212 Region_212 0 0 0 0
-213 Region_213 0 0 0 0
-214 Region_214 0 0 0 0
-215 Region_215 0 0 0 0
-216 Region_216 0 0 0 0
-217 Region_217 0 0 0 0
-218 Region_218 0 0 0 0
-219 Region_219 0 0 0 0
-220 Region_220 0 0 0 0
-221 Region_221 0 0 0 0
-222 Region_222 0 0 0 0
-223 Region_223 0 0 0 0
-224 Region_224 0 0 0 0
-225 Region_225 0 0 0 0
-226 Region_226 0 0 0 0
-227 Region_227 0 0 0 0
-228 Region_228 0 0 0 0
-229 Region_229 0 0 0 0
-230 Region_230 0 0 0 0
-231 Region_231 0 0 0 0
-232 Region_232 0 0 0 0
-233 Region_233 0 0 0 0
-234 Region_234 0 0 0 0
-235 Region_235 0 0 0 0
-236 Region_236 0 0 0 0
-237 Region_237 0 0 0 0
-238 Region_238 0 0 0 0
-239 Region_239 0 0 0 0
-240 Region_240 0 0 0 0
-241 Region_241 0 0 0 0
-242 Region_242 0 0 0 0
-243 Region_243 0 0 0 0
-244 Region_244 0 0 0 0
-245 Region_245 0 0 0 0
-246 Region_246 0 0 0 0
-247 Region_247 0 0 0 0
-248 Region_248 0 0 0 0
-249 Region_249 0 0 0 0
-250 Region_250 0 0 0 0
-251 Region_251 0 0 0 0
-252 Region_252 0 0 0 0
-253 Region_253 0 0 0 0
-254 Region_254 0 0 0 0
-255 Region_255 0 0 0 0
-256 Region_256 0 0 0 0
-257 Region_257 0 0 0 0
-258 Region_258 0 0 0 0
-259 Region_259 0 0 0 0
-260 Region_260 0 0 0 0
-261 Region_261 0 0 0 0
-262 Region_262 0 0 0 0
-263 Region_263 0 0 0 0
-264 Region_264 0 0 0 0
-265 Region_265 0 0 0 0
-266 Region_266 0 0 0 0
-267 Region_267 0 0 0 0
-268 Region_268 0 0 0 0
+idx	label	R	G	B	A	type
+1	Region_001	226	109	101	0	cortical
+2	Region_002	226	110	98	0	cortical
+3	Region_003	225	111	94	0	cortical
+4	Region_004	224	112	91	0	cortical
+5	Region_005	223	113	88	0	cortical
+6	Region_006	222	113	84	0	cortical
+7	Region_007	221	114	81	0	cortical
+8	Region_008	220	115	77	0	cortical
+9	Region_009	220	116	73	0	cortical
+10	Region_010	219	117	69	0	cortical
+11	Region_011	218	118	65	0	cortical
+12	Region_012	217	119	61	0	cortical
+13	Region_013	216	119	56	0	cortical
+14	Region_014	214	120	51	0	cortical
+15	Region_015	213	121	46	0	cortical
+16	Region_016	212	122	40	0	cortical
+17	Region_017	211	123	33	0	cortical
+18	Region_018	210	124	25	0	cortical
+19	Region_019	209	125	14	0	cortical
+20	Region_020	208	125	0	0	cortical
+21	Region_021	206	126	0	0	cortical
+22	Region_022	205	127	0	0	cortical
+23	Region_023	204	128	0	0	cortical
+24	Region_024	202	129	0	0	cortical
+25	Region_025	201	130	0	0	cortical
+26	Region_026	200	130	0	0	cortical
+27	Region_027	198	131	0	0	cortical
+28	Region_028	197	132	0	0	cortical
+29	Region_029	196	133	0	0	cortical
+30	Region_030	194	134	0	0	cortical
+31	Region_031	193	134	0	0	cortical
+32	Region_032	191	135	0	0	cortical
+33	Region_033	190	136	0	0	cortical
+34	Region_034	188	137	0	0	cortical
+35	Region_035	186	138	0	0	cortical
+36	Region_036	185	138	0	0	cortical
+37	Region_037	183	139	0	0	cortical
+38	Region_038	181	140	0	0	cortical
+39	Region_039	180	141	0	0	cortical
+40	Region_040	178	141	0	0	cortical
+41	Region_041	176	142	0	0	cortical
+42	Region_042	174	143	0	0	cortical
+43	Region_043	173	144	0	0	cortical
+44	Region_044	171	144	0	0	cortical
+45	Region_045	169	145	0	0	cortical
+46	Region_046	167	146	0	0	cortical
+47	Region_047	165	146	0	0	cortical
+48	Region_048	163	147	0	0	cortical
+49	Region_049	161	148	0	0	cortical
+50	Region_050	159	148	0	0	cortical
+51	Region_051	157	149	0	0	cortical
+52	Region_052	155	150	0	0	cortical
+53	Region_053	153	150	0	0	cortical
+54	Region_054	150	151	0	0	cortical
+55	Region_055	148	152	0	0	cortical
+56	Region_056	146	152	0	0	cortical
+57	Region_057	144	153	0	0	cortical
+58	Region_058	141	154	0	0	cortical
+59	Region_059	139	154	0	0	cortical
+60	Region_060	136	155	0	0	cortical
+61	Region_061	134	156	0	0	cortical
+62	Region_062	131	156	0	0	cortical
+63	Region_063	128	157	0	0	cortical
+64	Region_064	126	157	0	0	cortical
+65	Region_065	123	158	0	0	cortical
+66	Region_066	120	158	0	0	cortical
+67	Region_067	117	159	0	0	cortical
+68	Region_068	114	160	0	0	cortical
+69	Region_069	111	160	0	0	cortical
+70	Region_070	107	161	0	0	cortical
+71	Region_071	104	161	0	0	cortical
+72	Region_072	100	162	0	0	cortical
+73	Region_073	97	162	0	0	cortical
+74	Region_074	93	163	0	0	cortical
+75	Region_075	89	163	0	0	cortical
+76	Region_076	85	164	0	0	cortical
+77	Region_077	80	164	0	0	cortical
+78	Region_078	75	165	0	0	cortical
+79	Region_079	70	165	0	0	cortical
+80	Region_080	65	166	0	0	cortical
+81	Region_081	59	166	0	0	cortical
+82	Region_082	52	167	0	0	cortical
+83	Region_083	43	167	0	0	cortical
+84	Region_084	33	167	8	0	cortical
+85	Region_085	19	168	21	0	cortical
+86	Region_086	0	168	30	0	cortical
+87	Region_087	0	169	37	0	cortical
+88	Region_088	0	169	43	0	cortical
+89	Region_089	0	169	49	0	cortical
+90	Region_090	0	170	54	0	cortical
+91	Region_091	0	170	58	0	cortical
+92	Region_092	0	170	62	0	cortical
+93	Region_093	0	171	66	0	cortical
+94	Region_094	0	171	70	0	cortical
+95	Region_095	0	172	74	0	cortical
+96	Region_096	0	172	78	0	cortical
+97	Region_097	0	172	81	0	cortical
+98	Region_098	0	172	85	0	cortical
+99	Right_Region_099	0	173	88	0	subcortical
+100	Right_Region_100	0	173	91	0	cerebellar
+101	Region_101	0	173	94	0	cortical
+102	Right_Region_102	0	174	97	0	cerebellar
+103	Right_Region_103	0	174	100	0	cerebellar
+104	Right_Region_104	0	174	103	0	cerebellar
+105	Right_Region_105	0	174	106	0	cerebellar
+106	Region_106	0	174	109	0	cortical
+107	Right_Region_107	0	175	112	0	cerebellar
+108	Right_Region_108	0	175	115	0	cerebellar
+109	Right_Region_109	0	175	118	0	cerebellar
+110	Region_110	0	175	120	0	cortical
+111	Right_Region_111	0	175	123	0	cerebellar
+112	Right_Region_112	0	175	126	0	cerebellar
+113	Right_Region_113	0	176	128	0	cerebellar
+114	Right_Region_114	0	176	131	0	cerebellar
+115	Right_Region_115	0	176	133	0	cerebellar
+116	Right_Region_116	0	176	136	0	cerebellar
+117	Right_Region_117	0	176	139	0	cerebellar
+118	Right_Region_118	0	176	141	0	cerebellar
+119	Right_Region_119	0	176	143	0	cerebellar
+120	Region_120	0	176	146	0	cortical
+121	Right_Region_121	0	176	148	0	subcortical
+122	Region_122	0	176	151	0	cortical
+123	Region_123	0	176	153	0	cortical
+124	Region_124	0	176	155	0	cortical
+125	Right_Region_125	0	176	158	0	subcortical
+126	Right_Region_126	0	176	160	0	subcortical
+127	Right_Region_127	0	176	162	0	subcortical
+128	Right_Region_128	0	176	164	0	subcortical
+129	Right_Region_129	0	176	167	0	cerebellar
+130	Region_130	0	176	169	0	cortical
+131	Region_131	0	175	171	0	cortical
+132	Right_Region_132	0	175	173	0	subcortical
+133	Right_Region_133	0	175	175	0	cerebellar
+134	Region_134	0	175	177	0	cortical
+135	Region_135	0	175	179	0	cortical
+136	Region_136	0	174	182	0	cortical
+137	Region_137	0	174	184	0	cortical
+138	Region_138	0	174	186	0	cortical
+139	Region_139	0	174	188	0	cortical
+140	Region_140	0	173	189	0	cortical
+141	Region_141	0	173	191	0	cortical
+142	Region_142	0	173	193	0	cortical
+143	Region_143	0	172	195	0	cortical
+144	Region_144	0	172	197	0	cortical
+145	Region_145	0	171	199	0	cortical
+146	Region_146	0	171	201	0	cortical
+147	Region_147	0	170	202	0	cortical
+148	Region_148	0	170	204	0	cortical
+149	Region_149	0	169	206	0	cortical
+150	Region_150	0	169	207	0	cortical
+151	Region_151	0	168	209	0	cortical
+152	Region_152	0	168	211	0	cortical
+153	Region_153	0	167	212	0	cortical
+154	Region_154	0	167	214	0	cortical
+155	Region_155	0	166	215	0	cortical
+156	Region_156	0	165	217	0	cortical
+157	Region_157	0	165	218	0	cortical
+158	Region_158	0	164	220	0	cortical
+159	Region_159	0	163	221	0	cortical
+160	Region_160	0	162	222	0	cortical
+161	Region_161	0	162	224	0	cortical
+162	Region_162	0	161	225	0	cortical
+163	Region_163	0	160	226	0	cortical
+164	Region_164	0	159	227	0	cortical
+165	Region_165	0	158	228	0	cortical
+166	Region_166	0	157	229	0	cortical
+167	Region_167	0	156	230	0	cortical
+168	Region_168	0	155	231	0	cortical
+169	Region_169	0	154	232	0	cortical
+170	Region_170	0	154	233	0	cortical
+171	Region_171	0	153	234	0	cortical
+172	Region_172	0	151	235	0	cortical
+173	Region_173	19	150	236	0	cortical
+174	Region_174	39	149	236	0	cortical
+175	Region_175	52	148	237	0	cortical
+176	Region_176	63	147	238	0	cortical
+177	Region_177	72	146	238	0	cortical
+178	Region_178	80	145	239	0	cortical
+179	Region_179	87	144	239	0	cortical
+180	Region_180	93	143	240	0	cortical
+181	Region_181	99	141	240	0	cortical
+182	Region_182	105	140	240	0	cortical
+183	Region_183	110	139	241	0	cortical
+184	Region_184	116	138	241	0	cortical
+185	Region_185	120	137	241	0	cortical
+186	Region_186	125	135	241	0	cortical
+187	Region_187	130	134	241	0	cortical
+188	Region_188	134	133	241	0	cortical
+189	Region_189	138	131	241	0	cortical
+190	Region_190	142	130	241	0	cortical
+191	Region_191	146	129	241	0	cortical
+192	Region_192	150	128	241	0	cortical
+193	Region_193	154	126	240	0	cortical
+194	Region_194	157	125	240	0	cortical
+195	Region_195	160	124	240	0	cortical
+196	Region_196	164	122	239	0	cortical
+197	Region_197	167	121	239	0	cortical
+198	Region_198	170	120	238	0	cortical
+199	Region_199	173	118	238	0	cortical
+200	Region_200	176	117	237	0	cortical
+201	Region_201	179	116	236	0	cortical
+202	Region_202	182	115	236	0	cortical
+203	Region_203	184	113	235	0	cortical
+204	Region_204	187	112	234	0	cortical
+205	Region_205	189	111	233	0	cortical
+206	Region_206	192	110	232	0	cortical
+207	Region_207	194	109	231	0	cortical
+208	Region_208	196	108	230	0	cortical
+209	Region_209	198	106	229	0	cortical
+210	Region_210	201	105	228	0	cortical
+211	Region_211	203	104	227	0	cortical
+212	Region_212	205	103	226	0	cortical
+213	Region_213	206	102	224	0	cortical
+214	Region_214	208	101	223	0	cortical
+215	Region_215	210	100	222	0	cortical
+216	Region_216	212	99	220	0	cortical
+217	Region_217	213	98	219	0	cortical
+218	Region_218	215	98	218	0	cortical
+219	Region_219	216	97	216	0	cortical
+220	Region_220	218	96	215	0	cortical
+221	Region_221	219	95	213	0	cortical
+222	Region_222	220	95	211	0	cortical
+223	Region_223	222	94	210	0	cortical
+224	Region_224	223	94	208	0	cortical
+225	Region_225	224	93	206	0	cortical
+226	Region_226	225	93	204	0	cortical
+227	Region_227	226	92	203	0	cortical
+228	Region_228	227	92	201	0	cortical
+229	Region_229	228	91	199	0	cortical
+230	Region_230	228	91	197	0	cortical
+231	Left_Region_231	229	91	195	0	subcortical
+232	Region_232	230	91	193	0	cortical
+233	Region_233	231	91	191	0	cortical
+234	Region_234	231	91	189	0	cortical
+235	Region_235	232	91	187	0	cortical
+236	Left_Region_236	232	91	185	0	cerebellar
+237	Left_Region_237	233	91	183	0	cerebellar
+238	Left_Region_238	233	91	181	0	cerebellar
+239	Left_Region_239	234	91	179	0	cerebellar
+240	Left_Region_240	234	91	177	0	cerebellar
+241	Left_Region_241	234	91	174	0	cerebellar
+242	Left_Region_242	234	92	172	0	cerebellar
+243	Left_Region_243	235	92	170	0	cerebellar
+244	Region_244	235	92	168	0	cortical
+245	Left_Region_245	235	93	165	0	cerebellar
+246	Left_Region_246	235	93	163	0	cerebellar
+247	Left_Region_247	235	94	161	0	cerebellar
+248	Region_248	235	94	158	0	cortical
+249	Left_Region_249	235	95	156	0	cerebellar
+250	Left_Region_250	235	95	153	0	cerebellar
+251	Left_Region_251	235	96	151	0	cerebellar
+252	Left_Region_252	234	96	148	0	cerebellar
+253	Left_Region_253	234	97	146	0	cerebellar
+254	Region_254	234	98	143	0	cortical
+255	Left_Region_255	234	98	141	0	cerebellar
+256	Left_Region_256	233	99	138	0	cerebellar
+257	Region_257	233	100	135	0	cortical
+258	Left_Region_258	233	100	133	0	subcortical
+259	Left_Region_259	232	101	130	0	subcortical
+260	Region_260	232	102	127	0	cortical
+261	Left_Region_261	231	103	124	0	subcortical
+262	Left_Region_262	231	103	122	0	subcortical
+263	Left_Region_263	230	104	119	0	subcortical
+264	Left_Region_264	230	105	116	0	subcortical
+265	Left_Region_265	229	106	113	0	subcortical
+266	Left_Region_266	228	107	110	0	cerebellar
+267	Left_Region_267	228	107	107	0	cerebellar
+268	Region_268	227	108	104	0	cortical

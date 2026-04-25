@@ -14,9 +14,7 @@ Cerebellar regions from the Shen 268-node functional parcellation
 (Shen et al., 2013). Contains 2D polygon geometry and 3D meshes.
 }
 \examples{
-\dontrun{
 shen268_cerebellar()
-}
 }
 \references{
 Shen X et al. (2013). Groupwise whole-brain parcellation
