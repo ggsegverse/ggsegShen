@@ -58,22 +58,16 @@ shen268_subcortical()
 #> Rendering: ✔ ggseg
 #> ✔ ggseg3d (meshes)
 #> ────────────────────────────────────────────────────────────────────────────────
-#> # A tibble: 15 × 3
-#>    hemi  region     label           
-#>    <chr> <chr>      <chr>           
-#>  1 right region 099 Right_Region_099
-#>  2 right region 121 Right_Region_121
-#>  3 right region 125 Right_Region_125
-#>  4 right region 126 Right_Region_126
-#>  5 right region 127 Right_Region_127
-#>  6 right region 128 Right_Region_128
-#>  7 right region 132 Right_Region_132
-#>  8 left  region 231 Left_Region_231 
-#>  9 left  region 258 Left_Region_258 
-#> 10 left  region 259 Left_Region_259 
-#> 11 left  region 261 Left_Region_261 
-#> 12 left  region 262 Left_Region_262 
-#> 13 left  region 263 Left_Region_263 
-#> 14 left  region 264 Left_Region_264 
-#> 15 left  region 265 Left_Region_265 
+#>     hemi     region            label
+#> 1  right region 099 Right_Region_099
+#> 2  right region 121 Right_Region_121
+#> 3  right region 125 Right_Region_125
+#> 4  right region 126 Right_Region_126
+#> 5  right region 127 Right_Region_127
+#> 6  right region 128 Right_Region_128
+#> 7  right region 132 Right_Region_132
+#> 8   left region 231  Left_Region_231
+#> 9   left region 258  Left_Region_258
+#> 10  left region 259  Left_Region_259
+#> ... with 5 more rows
 ```

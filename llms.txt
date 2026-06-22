@@ -12,6 +12,7 @@ We recommend installing the ggseg-atlases through the ggseg
 [r-universe](https://ggseg.r-universe.dev/ui#builds):
 
 ``` r
+
 options(repos = c(
   ggseg = "https://ggseg.r-universe.dev",
   CRAN = "https://cloud.r-project.org"
@@ -23,6 +24,7 @@ install.packages("ggsegShen")
 You can install this package from [GitHub](https://github.com/) with:
 
 ``` r
+
 # install.packages("pak")
 pak::pak("ggsegverse/ggsegShen")
 ```
@@ -30,6 +32,7 @@ pak::pak("ggsegverse/ggsegShen")
 ## Cortical atlas
 
 ``` r
+
 library(ggseg)
 library(ggsegShen)
 
@@ -41,6 +44,7 @@ plot(shen268_cortical())
 ## Subcortical atlas
 
 ``` r
+
 plot(shen268_subcortical())
 ```
 
@@ -60,6 +64,7 @@ for details.
 ## Cerebellar atlas
 
 ``` r
+
 plot(shen268_cerebellar())
 ```
 
