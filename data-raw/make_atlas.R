@@ -18,11 +18,14 @@ label_ids <- sort(unique(as.integer(arr[arr > 0])))
 cli::cli_h1("Creating Shen 268-parcel atlas")
 cli::cli_alert_info("Found {length(label_ids)} non-zero labels in volume")
 
-centroids <- do.call(rbind, lapply(label_ids, function(l) {
-  coords <- which(arr == l, arr.ind = TRUE)
-  mni <- xform %*% rbind(t(coords - 1), 1)
-  colMeans(t(mni)[, 1:3, drop = FALSE])
-}))
+centroids <- do.call(
+  rbind,
+  lapply(label_ids, function(l) {
+    coords <- which(arr == l, arr.ind = TRUE)
+    mni <- xform %*% rbind(t(coords - 1), 1)
+    colMeans(t(mni)[, 1:3, drop = FALSE])
+  })
+)
 
 lut <- tibble(
   idx = label_ids,
@@ -50,7 +53,8 @@ lut <- tibble(
 
 palette <- grDevices::hcl(
   h = seq(15, 375, length.out = nrow(lut) + 1)[seq_len(nrow(lut))],
-  c = 90, l = 60
+  c = 90,
+  l = 60
 )
 rgb_mat <- grDevices::col2rgb(palette)
 lut$R <- as.integer(rgb_mat["red", ])
@@ -87,7 +91,8 @@ Sys.setenv(FREESURFER_HOME = fs_home)
 Sys.setenv(SUBJECTS_DIR = file.path(fs_home, "subjects"))
 
 aparc_aseg_src <- file.path(
-  fs_home, "subjects/cvs_avg35_inMNI152/mri/aparc+aseg.mgz"
+  fs_home,
+  "subjects/cvs_avg35_inMNI152/mri/aparc+aseg.mgz"
 )
 if (!file.exists(aparc_aseg_src)) {
   cli::cli_abort("aparc+aseg source not found: {.path {aparc_aseg_src}}")
@@ -95,13 +100,18 @@ if (!file.exists(aparc_aseg_src)) {
 
 aparc_aseg_nii <- here::here("data-raw", "aparc_aseg_1mm.nii.gz")
 if (!file.exists(aparc_aseg_nii)) {
-  system2("mri_convert", c(
-    shQuote(aparc_aseg_src), shQuote(aparc_aseg_nii)
-  ))
+  system2(
+    "mri_convert",
+    c(
+      shQuote(aparc_aseg_src),
+      shQuote(aparc_aseg_nii)
+    )
+  )
 }
 
 cvs_brain_src <- file.path(
-  fs_home, "subjects/cvs_avg35_inMNI152/mri/brain.mgz"
+  fs_home,
+  "subjects/cvs_avg35_inMNI152/mri/brain.mgz"
 )
 cvs_brain_mask <- here::here("data-raw", "cvs_brain_mask.nii.gz")
 if (!file.exists(cvs_brain_mask)) {
@@ -111,7 +121,8 @@ if (!file.exists(cvs_brain_mask)) {
   bmask <- (as.array(bvol) > 0) * 1L
   storage.mode(bmask) <- "integer"
   RNifti::writeNifti(
-    RNifti::asNifti(bmask, reference = bvol), cvs_brain_mask
+    RNifti::asNifti(bmask, reference = bvol),
+    cvs_brain_mask
   )
 }
 
@@ -120,30 +131,46 @@ if (!file.exists(shen_brain_mask)) {
   smask <- (arr > 0) * 1L
   storage.mode(smask) <- "integer"
   RNifti::writeNifti(
-    RNifti::asNifti(smask, reference = vol), shen_brain_mask
+    RNifti::asNifti(smask, reference = vol),
+    shen_brain_mask
   )
 }
 
 shen_to_cvs_lta <- here::here("data-raw", "shen_to_cvs.lta")
 if (!file.exists(shen_to_cvs_lta)) {
   cli::cli_alert_info("Co-registering Shen to cvs_avg35 (rigid + scale)")
-  system2("mri_coreg", c(
-    "--mov", shQuote(shen_brain_mask),
-    "--ref", shQuote(cvs_brain_mask),
-    "--reg", shQuote(shen_to_cvs_lta),
-    "--dof", "12"
-  ))
+  system2(
+    "mri_coreg",
+    c(
+      "--mov",
+      shQuote(shen_brain_mask),
+      "--ref",
+      shQuote(cvs_brain_mask),
+      "--reg",
+      shQuote(shen_to_cvs_lta),
+      "--dof",
+      "12"
+    )
+  )
 }
 
 shen_1mm <- here::here("data-raw", "shen_1mm_coreg.nii.gz")
 if (!file.exists(shen_1mm)) {
-  system2("mri_vol2vol", c(
-    "--mov", shQuote(volume_file),
-    "--targ", shQuote(aparc_aseg_src),
-    "--reg", shQuote(shen_to_cvs_lta),
-    "--interp", "nearest",
-    "--o", shQuote(shen_1mm)
-  ))
+  system2(
+    "mri_vol2vol",
+    c(
+      "--mov",
+      shQuote(volume_file),
+      "--targ",
+      shQuote(aparc_aseg_src),
+      "--reg",
+      shQuote(shen_to_cvs_lta),
+      "--interp",
+      "nearest",
+      "--o",
+      shQuote(shen_1mm)
+    )
+  )
 }
 
 aparc <- RNifti::readNifti(aparc_aseg_nii)
@@ -163,15 +190,26 @@ for (i in seq_along(shen_subcort_idx)) {
   bmask_1mm <- tempfile(fileext = ".nii.gz")
   bmask_arr <- (arr == id) * 1.0
   RNifti::writeNifti(
-    RNifti::asNifti(bmask_arr, reference = vol), bmask_2mm
+    RNifti::asNifti(bmask_arr, reference = vol),
+    bmask_2mm
   )
-  system2("mri_vol2vol", c(
-    "--mov", shQuote(bmask_2mm),
-    "--targ", shQuote(aparc_aseg_src),
-    "--reg", shQuote(shen_to_cvs_lta),
-    "--interp", "trilin",
-    "--o", shQuote(bmask_1mm)
-  ), stdout = FALSE, stderr = FALSE)
+  system2(
+    "mri_vol2vol",
+    c(
+      "--mov",
+      shQuote(bmask_2mm),
+      "--targ",
+      shQuote(aparc_aseg_src),
+      "--reg",
+      shQuote(shen_to_cvs_lta),
+      "--interp",
+      "trilin",
+      "--o",
+      shQuote(bmask_1mm)
+    ),
+    stdout = FALSE,
+    stderr = FALSE
+  )
   prob_stack[, i] <- as.numeric(as.array(RNifti::readNifti(bmask_1mm)))
   unlink(c(bmask_2mm, bmask_1mm))
 }
@@ -192,7 +230,9 @@ for (id in shen_subcort_idx) {
 storage.mode(merged) <- "integer"
 
 merged_file <- here::here(
-  "data-raw", "shen268", "shen268",
+  "data-raw",
+  "shen268",
+  "shen268",
   "subcort_anatomical.nii.gz"
 )
 dir.create(dirname(merged_file), showWarnings = FALSE, recursive = TRUE)
@@ -207,14 +247,21 @@ sub_lut <- lut_out[
   c("idx", "label", "R", "G", "B", "A")
 ]
 sub_lut_file <- here::here(
-  "data-raw", "shen268", "shen268", "subcort_anatomical_lut.txt"
+  "data-raw",
+  "shen268",
+  "shen268",
+  "subcort_anatomical_lut.txt"
 )
 readr::write_tsv(sub_lut, sub_lut_file)
 
-subcort_views <- rbind(
-  data.frame(name = "axial_1", type = "axial", start = 85, end = 107),
-  data.frame(name = "axial_2", type = "axial", start = 108, end = 130),
-  data.frame(name = "coronal_1", type = "coronal", start = 133, end = 154)
+# Frame the slabs on the parcels themselves and dilate so the 15 subcortical
+# parcels read as filled shapes inside the grey brain, not sparse slivers.
+subcort_slabs <- subcortical_slabs(
+  merged_file,
+  labels = shen_subcort_idx,
+  coronal = 3,
+  axial = 4,
+  pad = 2
 )
 
 cli::cli_h2("Creating subcortical atlas with anatomical context")
@@ -222,21 +269,36 @@ cli::cli_h2("Creating subcortical atlas with anatomical context")
   input_volume = merged_file,
   input_lut = sub_lut_file,
   atlas_name = "shen268_subcortical",
-  views = subcort_views,
+  slabs = subcort_slabs,
   output_dir = here::here("data-raw", "shen268"),
   tolerance = 1,
   smoothness = 2,
   decimate = 0.9,
-  dilate = 0,
+  dilate = 2L,
   skip_existing = FALSE,
   cleanup = FALSE,
   verbose = TRUE
+)
+.shen268_subcortical <- .shen268_subcortical |>
+  ggseg.formats::atlas_view_gather() |>
+  atlas_smooth(keep = 0.3)
+
+# Even, distinct hues so the 15 parcels are individually distinguishable (the
+# raw Shen LUT is a near-flat green/magenta per-hemisphere gradient).
+sub_lbl <- ggseg.formats::atlas_labels(.shen268_subcortical)
+sub_hues <- seq(15, 375, length.out = length(sub_lbl) + 1)[seq_along(sub_lbl)]
+set.seed(5)
+ggseg.formats::atlas_palette(.shen268_subcortical) <- setNames(
+  sample(grDevices::hcl(h = sub_hues, c = 90, l = 65)),
+  sub_lbl
 )
 
 cerebellar_idx <- lut$idx[lut$type == "cerebellar"]
 cerebellar_mni <- tempfile(fileext = ".nii.gz")
 result_arr <- array(0L, dim = dim(arr))
-for (id in cerebellar_idx) result_arr[arr == id] <- id
+for (id in cerebellar_idx) {
+  result_arr[arr == id] <- id
+}
 cerebellar_vol <- RNifti::asNifti(result_arr, reference = vol)
 if (RNifti::orientation(cerebellar_vol) != "RAS") {
   RNifti::orientation(cerebellar_vol) <- "RAS"
@@ -273,6 +335,16 @@ cer_lut <- lut_out[
   skip_existing = FALSE,
   cleanup = FALSE,
   verbose = TRUE
+)
+
+# Distinct hues for the 39 cerebellar parcels (same reason as the subcortical:
+# the raw LUT is a near-flat green/magenta per-hemisphere gradient).
+cer_lbl <- ggseg.formats::atlas_labels(.shen268_cerebellar)
+cer_hues <- seq(15, 375, length.out = length(cer_lbl) + 1)[seq_along(cer_lbl)]
+set.seed(3)
+ggseg.formats::atlas_palette(.shen268_cerebellar) <- setNames(
+  sample(grDevices::hcl(h = cer_hues, c = 90, l = 65)),
+  cer_lbl
 )
 
 .shen268_cortical <- atlases$cortical

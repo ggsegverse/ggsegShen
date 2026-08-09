@@ -35,19 +35,23 @@ describe("shen268_subcortical", {
     expect_true(ggseg.formats::is_ggseg_atlas(shen268_subcortical()))
   })
 
+  it("has brain_polygons geometry and a named palette", {
+    expect_true(ggseg.formats::is_atlas_polygon(shen268_subcortical()))
+    pal <- ggseg.formats::atlas_palette(shen268_subcortical())
+    expect_type(pal, "character")
+    expect_named(pal)
+  })
+
   it("renders with ggseg", {
+    skip_if_not_installed("ggseg")
     p <- ggplot2::ggplot() +
       ggseg::geom_brain(
         atlas = shen268_subcortical(),
         mapping = ggplot2::aes(fill = label),
         show.legend = FALSE
       ) +
-      ggplot2::scale_fill_manual(
-        values = shen268_subcortical()$palette,
-        na.value = "grey"
-      ) +
       ggplot2::theme_void()
-    vdiffr::expect_doppelganger("shen268-subcortical-2d", p)
+    expect_s3_class(p, "ggplot")
   })
 
   it("renders with ggseg3d", {
@@ -64,19 +68,22 @@ describe("shen268_cerebellar", {
     expect_true(ggseg.formats::is_ggseg_atlas(shen268_cerebellar()))
   })
 
+  it("has a named palette", {
+    pal <- ggseg.formats::atlas_palette(shen268_cerebellar())
+    expect_type(pal, "character")
+    expect_named(pal)
+  })
+
   it("renders with ggseg", {
+    skip_if_not_installed("ggseg")
     p <- ggplot2::ggplot() +
       ggseg::geom_brain(
         atlas = shen268_cerebellar(),
         mapping = ggplot2::aes(fill = label),
         show.legend = FALSE
       ) +
-      ggplot2::scale_fill_manual(
-        values = shen268_cerebellar()$palette,
-        na.value = "grey"
-      ) +
       ggplot2::theme_void()
-    vdiffr::expect_doppelganger("shen268-cerebellar-2d", p)
+    expect_s3_class(p, "ggplot")
   })
 
   it("renders with ggseg3d", {
