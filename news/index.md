@@ -1,5 +1,18 @@
 # Changelog
 
+## ggsegShen 1.0.3
+
+- The subcortical atlas now uses bounding-box-framed slabs (3 coronal +
+  4 axial) and structure dilation, so the 15 parcels read as filled
+  shapes inside the grey brain across 7 views instead of a few sparse
+  slivers over 3 views.
+- Both the subcortical and cerebellar atlases now use evenly-spaced,
+  distinct hues, so individual parcels are distinguishable (the raw Shen
+  LUT was a near-flat green/magenta per-hemisphere gradient). The
+  subcortical rebuild requires FreeSurfer 7.4.1.
+- Replaced the brittle subcortical/cerebellar `vdiffr` snapshots with
+  structural assertions.
+
 ## ggsegShen 1.0.2
 
 - Atlas 2D geometry migrated to the sf-optional `brain_polygons` format

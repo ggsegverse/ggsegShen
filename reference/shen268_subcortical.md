@@ -53,7 +53,7 @@ shen268_subcortical()
 #> Type: subcortical
 #> Regions: 15
 #> Hemispheres: right, left
-#> Views: axial_1, axial_2, coronal_1
+#> Views: axial_1, axial_2, axial_3, axial_4, coronal_1, coronal_2, coronal_3
 #> Palette: ✔
 #> Rendering: ✔ ggseg
 #> ✔ ggseg3d (meshes)
