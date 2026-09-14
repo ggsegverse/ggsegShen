@@ -1,3 +1,19 @@
+# ggsegShen 1.0.4
+
+- Rebuilt all three atlases against the fixed ggseg.extra pipeline: cortical
+  holes are filled, the medial wall is kept as grey context, snapshot masks are
+  read with an explicit y direction, and subcortical slabs are framed on the
+  label bounding box.
+- `data-raw/make_atlas.R` now calls `atlas_simplify()` and `atlas_smooth()`
+  separately (`atlas_smooth(keep = )` was removed), passes
+  `registration = "header"` instead of the deprecated `regheader`, and drops the
+  retired `tolerance`/`smoothness` arguments.
+- The cortical atlas drops from 217 to 203 regions. `Region_122`, `Region_257`
+  and `Region_260` are lost outright (2-7 surface vertices each), and ten
+  minority-hemisphere spill fragments are gone; every one of those ten has a
+  surviving twin in its proper hemisphere. The subcortical (15) and cerebellar
+  (39) region counts are unchanged.
+
 # ggsegShen 1.0.3
 
 - The subcortical atlas now uses bounding-box-framed slabs (3 coronal + 4 axial)

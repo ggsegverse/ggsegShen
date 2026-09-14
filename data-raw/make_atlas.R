@@ -78,7 +78,7 @@ atlases <- create_wholebrain_from_volume(
   input_lut = lut_out,
   atlas_name = "shen268",
   output_dir = "data-raw/shen268",
-  regheader = TRUE,
+  registration = "header",
   skip_existing = TRUE,
   cleanup = FALSE,
   verbose = TRUE,
@@ -271,8 +271,6 @@ cli::cli_h2("Creating subcortical atlas with anatomical context")
   atlas_name = "shen268_subcortical",
   slabs = subcort_slabs,
   output_dir = here::here("data-raw", "shen268"),
-  tolerance = 1,
-  smoothness = 2,
   decimate = 0.9,
   dilate = 2L,
   skip_existing = FALSE,
@@ -281,16 +279,17 @@ cli::cli_h2("Creating subcortical atlas with anatomical context")
 )
 .shen268_subcortical <- .shen268_subcortical |>
   ggseg.formats::atlas_view_gather() |>
-  atlas_smooth(keep = 0.3)
+  atlas_simplify(keep = 0.3) |>
+  atlas_smooth()
 
 # Even, distinct hues so the 15 parcels are individually distinguishable (the
 # raw Shen LUT is a near-flat green/magenta per-hemisphere gradient).
 sub_lbl <- ggseg.formats::atlas_labels(.shen268_subcortical)
 sub_hues <- seq(15, 375, length.out = length(sub_lbl) + 1)[seq_along(sub_lbl)]
 set.seed(5)
-ggseg.formats::atlas_palette(.shen268_subcortical) <- setNames(
-  sample(grDevices::hcl(h = sub_hues, c = 90, l = 65)),
-  sub_lbl
+.shen268_subcortical <- ggseg.formats::set_atlas_palette(
+  .shen268_subcortical,
+  setNames(sample(grDevices::hcl(h = sub_hues, c = 90, l = 65)), sub_lbl)
 )
 
 cerebellar_idx <- lut$idx[lut$type == "cerebellar"]
@@ -342,9 +341,9 @@ cer_lut <- lut_out[
 cer_lbl <- ggseg.formats::atlas_labels(.shen268_cerebellar)
 cer_hues <- seq(15, 375, length.out = length(cer_lbl) + 1)[seq_along(cer_lbl)]
 set.seed(3)
-ggseg.formats::atlas_palette(.shen268_cerebellar) <- setNames(
-  sample(grDevices::hcl(h = cer_hues, c = 90, l = 65)),
-  cer_lbl
+.shen268_cerebellar <- ggseg.formats::set_atlas_palette(
+  .shen268_cerebellar,
+  setNames(sample(grDevices::hcl(h = cer_hues, c = 90, l = 65)), cer_lbl)
 )
 
 .shen268_cortical <- atlases$cortical
