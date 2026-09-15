@@ -8,11 +8,16 @@
   separately (`atlas_smooth(keep = )` was removed), passes
   `registration = "header"` instead of the deprecated `regheader`, and drops the
   retired `tolerance`/`smoothness` arguments.
-- The cortical atlas drops from 217 to 203 regions. `Region_257` and
-  `Region_260` are lost from both hemispheres and `Region_122` from its only
-  hemisphere (2-7 surface vertices each); seven minority-hemisphere spill
-  fragments are gone, each with a surviving twin in its proper hemisphere; and
-  `lh_unknown`/`rh_unknown` are now grey context rather than regions. The
+- The cortical atlas drops from 217 to 203 regions. `Region_122`, `Region_257`
+  and `Region_260` are gone because they projected only onto medial-wall
+  vertices, which the pipeline no longer keeps: each is a deep caudate or
+  white-matter parcel with no cortical grey matter, winning 2-7 fsaverage5
+  vertices, none of them inside the cortex label. `Region_122` and `Region_260`
+  are the right and left members of one caudate pair, both just outside the
+  script's subcortical cut. What they drew before was a sliver of area 29
+  against a per-region median of 1000. Seven minority-hemisphere spill
+  fragments are also gone, each with a surviving twin in its proper hemisphere,
+  and `lh_unknown`/`rh_unknown` are now grey context rather than regions. The
   subcortical (15) and cerebellar (39) region counts are unchanged.
 
 # ggsegShen 1.0.3
