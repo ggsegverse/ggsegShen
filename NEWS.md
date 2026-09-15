@@ -4,6 +4,16 @@
   holes are filled, the medial wall is kept as grey context, snapshot masks are
   read with an explicit y direction, and subcortical slabs are framed on the
   label bounding box.
+- The grey `cortex_` silhouette behind the subcortical parcels keeps its sulci
+  and gyri. It was dilated at the snapshot stage and then closed by the default
+  `atlas_smooth()`, and both fill anything narrower than they reach, so the
+  context came out as a thick rounded band with the sulci filled in and
+  detached grey islands where the closing broke rings. The parcels and the
+  context are now polished separately: the parcels are grown with
+  `atlas_dilate()` and closed as before, while the context is left out of both
+  and rounded with `chaikin`, which moves vertices instead of growing the shape.
+  The parcels are grown by the same amount they were before, and the 3D meshes,
+  the region list and the palette are untouched.
 - `data-raw/make_atlas.R` now calls `atlas_simplify()` and `atlas_smooth()`
   separately (`atlas_smooth(keep = )` was removed), passes
   `registration = "header"` instead of the deprecated `regheader`, and drops the

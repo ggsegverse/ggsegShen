@@ -254,8 +254,8 @@ sub_lut_file <- here::here(
 )
 readr::write_tsv(sub_lut, sub_lut_file)
 
-# Frame the slabs on the parcels themselves and dilate so the 15 subcortical
-# parcels read as filled shapes inside the grey brain, not sparse slivers.
+# Frame the slabs on the parcels themselves so the 15 subcortical parcels
+# read as filled shapes inside the grey brain, not sparse slivers.
 subcort_slabs <- subcortical_slabs(
   merged_file,
   labels = shen_subcort_idx,
@@ -272,15 +272,34 @@ cli::cli_h2("Creating subcortical atlas with anatomical context")
   slabs = subcort_slabs,
   output_dir = here::here("data-raw", "shen268"),
   decimate = 0.9,
-  dilate = 2L,
   skip_existing = FALSE,
   cleanup = FALSE,
   verbose = TRUE
 )
+
+# The subcortical atlas is two kinds of geometry in one object, and they want
+# opposite treatment, so they are polished separately rather than in one pass.
+#
+# The parcels are small, compact and carry no fine detail worth keeping. They
+# are grown so they read as filled shapes rather than slivers, simplified hard
+# to take the buffer's arcs back down, and rounded with the default close.
+#
+# The `cortex_` silhouette is anatomical context: what makes it readable as a
+# brain is its sulcal and gyral shape, which is fine-scale detail. Growing it
+# closes its sulci, and so does `atlas_smooth(method = "close")`, since closing
+# fills anything narrower than the smoothing distance and a sulcus is exactly
+# that. Dilating and closing it is what turned the silhouette into a thick
+# rounded band with detached grey islands where the closing broke rings. So it
+# is kept out of both, keeps more of its vertices, and is rounded with
+# `chaikin`, which moves vertices instead of dilating and leaves every sulcus
+# open.
 .shen268_subcortical <- .shen268_subcortical |>
   ggseg.formats::atlas_view_gather() |>
-  atlas_simplify(keep = 0.3) |>
-  atlas_smooth()
+  atlas_dilate(1.7, exclude = "^cortex") |>
+  atlas_simplify(keep = 0.4, labels = "^cortex") |>
+  atlas_smooth(smoothness = 0.4, labels = "^cortex", method = "chaikin") |>
+  atlas_simplify(keep = 0.1, exclude = "^cortex") |>
+  atlas_smooth(smoothness = 0.4, exclude = "^cortex")
 
 # Even, distinct hues so the 15 parcels are individually distinguishable (the
 # raw Shen LUT is a near-flat green/magenta per-hemisphere gradient).
