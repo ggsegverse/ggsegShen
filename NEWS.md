@@ -1,4 +1,4 @@
-# ggsegShen 1.0.4
+# ggsegShen 1.0.3.9001
 
 - Rebuilt all three atlases against the fixed ggseg.extra pipeline: cortical
   holes are filled, the medial wall is kept as grey context, snapshot masks are
