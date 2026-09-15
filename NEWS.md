@@ -1,3 +1,35 @@
+# ggsegShen 1.0.3.9001
+
+- Rebuilt all three atlases against the fixed ggseg.extra pipeline: cortical
+  holes are filled, the medial wall is kept as grey context, snapshot masks are
+  read with an explicit y direction, and subcortical slabs are framed on the
+  label bounding box.
+- The grey `cortex_` silhouette behind the subcortical parcels keeps its sulci
+  and gyri. It was dilated at the snapshot stage and then closed by the default
+  `atlas_smooth()`, and both fill anything narrower than they reach, so the
+  context came out as a thick rounded band with the sulci filled in and
+  detached grey islands where the closing broke rings. The parcels and the
+  context are now polished separately: the parcels are grown with
+  `atlas_dilate()` and closed as before, while the context is left out of both
+  and rounded with `chaikin`, which moves vertices instead of growing the shape.
+  The parcels are grown by the same amount they were before, and the 3D meshes,
+  the region list and the palette are untouched.
+- `data-raw/make_atlas.R` now calls `atlas_simplify()` and `atlas_smooth()`
+  separately (`atlas_smooth(keep = )` was removed), passes
+  `registration = "header"` instead of the deprecated `regheader`, and drops the
+  retired `tolerance`/`smoothness` arguments.
+- The cortical atlas drops from 217 to 203 regions. `Region_122`, `Region_257`
+  and `Region_260` are gone because they projected only onto medial-wall
+  vertices, which the pipeline no longer keeps: each is a deep caudate or
+  white-matter parcel with no cortical grey matter, winning 2-7 fsaverage5
+  vertices, none of them inside the cortex label. `Region_122` and `Region_260`
+  are the right and left members of one caudate pair, both just outside the
+  script's subcortical cut. What they drew before was a sliver of area 29
+  against a per-region median of 1000. Seven minority-hemisphere spill
+  fragments are also gone, each with a surviving twin in its proper hemisphere,
+  and `lh_unknown`/`rh_unknown` are now grey context rather than regions. The
+  subcortical (15) and cerebellar (39) region counts are unchanged.
+
 # ggsegShen 1.0.3
 
 - The subcortical atlas now uses bounding-box-framed slabs (3 coronal + 4 axial)
