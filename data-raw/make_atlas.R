@@ -78,7 +78,7 @@ atlases <- create_wholebrain_from_volume(
   input_lut = lut_out,
   atlas_name = "shen268",
   output_dir = "data-raw/shen268",
-  registration = "header",
+  projection_opts = list(registration = "header"),
   skip_existing = TRUE,
   cleanup = FALSE,
   verbose = TRUE,
@@ -345,11 +345,10 @@ cer_lut <- lut_out[
 ]
 
 .shen268_cerebellar <- create_cerebellar_from_volume(
-  volume = cerebellar_suit,
+  input_volume = cerebellar_suit,
   input_lut = cer_lut,
   atlas_name = "shen268_cerebellar",
   output_dir = "data-raw/shen268/shen268",
-  smooth_refinements = 2L,
   skip_existing = FALSE,
   cleanup = FALSE,
   verbose = TRUE
